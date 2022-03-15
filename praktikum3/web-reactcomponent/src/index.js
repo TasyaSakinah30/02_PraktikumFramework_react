@@ -5,7 +5,7 @@ import App from "./App";
 import reportWebVitals from './reportWebVitals';
 import HelloComponent from './component/HelloComponent';
 import LoginComponent from './component/LoginComponent';
-// import StateFullComponent from "./container/StateFullComponent";
+import StateFullComponent from "./container/StateFullComponent";
 
 // function HelloComponent() {
 //   return (
@@ -15,23 +15,30 @@ import LoginComponent from './component/LoginComponent';
 //     </div>
 //   );
 // }
-
 // ReactDOM.render(<HelloComponent />, document.getElementById("root"));
 
-// class StateFullComponent extends Component {
-//   render() {
-//     return <p>Ini StateFullComponent<p/>
-//   }
+// const HelloComponent = () => {
+//   return <p>React Component</p>
 // }
+// ReactDOM.render(<HelloComponent />, document.getElementById("root"));
 
+// class StateFullComponent extends React.Component {
+//   render(){
+//   return (
+//     <div>
+//       <h1>React Component</h1>
+//       <h2>Belajar React Component</h2>
+//     </div>
+//   );
+//     }
+//   }
 // ReactDOM.render(<StateFullComponent />, document.getElementById("root"));
 
 // ReactDOM.render(<App />, document.getElementById('root'));
 
 // ReactDOM.render(<HelloComponent />, document.getElementById('root'));
 
-ReactDOM.render(<LoginComponent />, document.getElementById('root'));
-
+// ReactDOM.render(<LoginComponent />, document.getElementById('root'));
 // class Test extends React.Component { 
 //   constructor(props) 
 //   { 
@@ -74,8 +81,8 @@ ReactDOM.render(<LoginComponent />, document.getElementById('root'));
 //     console.log("componentDidUpdate()"); 
 //   } 
 //  } 
-//  ReactDOM.render(<Test />, document.getElementById('root')); 
- 
+//  ReactDOM.render(<Test />, document.getElementById('root'));
+
 // ReactDOM.render(
 //   <React.StrictMode>
 //     <App />
@@ -86,4 +93,5 @@ ReactDOM.render(<LoginComponent />, document.getElementById('root'));
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
 reportWebVitals();
