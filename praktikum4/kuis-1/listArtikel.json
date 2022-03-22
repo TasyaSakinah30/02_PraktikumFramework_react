@@ -32,13 +32,23 @@
     },
     {
       "userId": 1,
-      "id": 1647350641469,
-      "nim": "19234567",
-      "nama": "Dina Anggraini",
-      "alamat": "Jl. Slamet Wardoyo",
-      "hp": "082345678",
+      "id": 1647397359163,
+      "nim": "12367346",
+      "nama": "Dina",
+      "alamat": "malang",
+      "hp": "0812345678",
       "angkatan": "2019",
       "status": "aktif"
+    },
+    {
+      "userId": 1,
+      "id": 1647402437174,
+      "nim": "2021434574",
+      "nama": "dino",
+      "alamat": "malang",
+      "hp": "08232",
+      "angkatan": "2014",
+      "status": "lulus"
     }
   ],
   "comments": [
