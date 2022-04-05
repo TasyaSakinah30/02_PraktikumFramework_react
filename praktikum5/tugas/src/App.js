@@ -112,15 +112,19 @@ function Home() {
 function Menu() {
   let { path, url } = useRouteMatch();
   return (
-    <div>
+    <div className="men">
       <h2>Menu</h2>
       <ul>
-        <li>
-          <Link to={`${url}/Kemeja, Outer, Celana`}>Outfit</Link>
-        </li>
-        <li>
-          <Link to={`${url}/Jam Tangan, Gelang, Kuncir`}>Aksesoris</Link>
-        </li>
+        <ul>
+          <img src='/gambar/kemeja.jpg'></img>
+          <img className="g1" src='/gambar/outer.jpg'></img>
+          <img className="g2" src='/gambar/celana.jpg'></img>
+        </ul>
+        <ul>
+          <Link className="kem" to={`${url}/Harga Rp 150.000`}>Beli</Link>
+          <Link className="out" to={`${url}/Harga Rp 100.000`}>Beli</Link>
+          <Link className="cel" to={`${url}/Harga Rp 200.000`}>Beli</Link>
+        </ul>
       </ul>
       <Switch>
         <Route exact path={path}>
