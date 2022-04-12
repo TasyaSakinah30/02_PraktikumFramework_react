@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import LoadIndicator from "./LoaderHOC.jsx";
-import './ContactsApp.css';
+// import './ContactsApp.css';
 
 class LoaderDemo extends Component {
     constructor(props) {

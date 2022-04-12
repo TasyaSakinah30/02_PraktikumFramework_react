@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "id" : 1,
+      "title" : "IPhone 11",
+      "price" : 20,
+      "desc" : "blabla",
+      "img" : "/assets/images/products/iphone.jpg"
+  },
+  {
+      "id" : 2,
+      "title" : "IPhone 11",
+      "price" : 22,
+      "desc" : "blabla",
+      "img" : "/assets/images/products/iphone2.jpg"
+  }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
