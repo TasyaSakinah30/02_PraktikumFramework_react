@@ -2,17 +2,93 @@
   "posts": [
     {
       "id" : 1,
-      "title" : "IPhone 11",
-      "price" : 20,
-      "desc" : "blabla",
-      "img" : "/assets/images/products/iphone.jpg"
+      "title" : "Sharp ES-T85CR",
+      "price" : 1600000,
+      "stok"  : 10,
+      "desc" : "Kapasitas pencucian: 8Kg",
+      "img" : "/assets/images/products/cuci1.jpg",
+      "quantity"  : 1
   },
   {
       "id" : 2,
-      "title" : "IPhone 11",
-      "price" : 22,
-      "desc" : "blabla",
-      "img" : "/assets/images/products/iphone2.jpg"
+      "title" : "Sharp ES-T65MW",
+      "price" : 1200000,
+      "stok"  : 5,
+      "desc" : "Kapasitas pencucian: 6.5Kg",
+      "img" : "/assets/images/products/cuci2.jpg",
+      "quantity"  : 1
+  },
+  {
+    "id" : 3,
+    "title" : "Samsung",
+    "price" : 2000000,
+    "stok"  : 8,
+    "desc" : "Kapasitas pencucian: 7Kg",
+    "img" : "/assets/images/products/cuci3.jpg",
+    "quantity"  : 1
+  },
+  {
+    "id" : 4,
+    "title" : "LG P905R",
+    "price" : 2200000,
+    "stok"  : 2,
+    "desc" : "Kapasitas pencucian: 9Kg",
+    "img" : "/assets/images/products/cuci4.jpg",
+    "quantity"  : 1
+  },
+  {
+    "id" : 5,
+    "title" : "Sharp ES-T1090",
+    "price" : 2090000,
+    "stok"  : 8,
+    "desc" : "Kapasitas pencucian: 10Kg",
+    "img" : "/assets/images/products/cuci5.jpg",
+    "quantity"  : 1
+  },
+  {
+    "id" : 6,
+    "title" : "LG P800N",
+    "price" : 2200000,
+    "stok"  : 4,
+    "desc" : "Kapasitas pencucian: 8Kg",
+    "img" : "/assets/images/products/cuci6.jpg",
+    "quantity"  : 1
+  },
+  {
+    "id" : 7,
+    "title" : "Aqua",
+    "price" : 1200000,
+    "stok"  : 15,
+    "desc" : "Kapasitas pencucian: 7Kg",
+    "img" : "/assets/images/products/cuci7.jpg",
+    "quantity"  : 1
+  },
+  {
+    "id" : 8,
+    "title" : "Polytron",
+    "price" : 2500000,
+    "stok"  : 10,
+    "desc" : "Kapasitas pencucian: 9.5Kg",
+    "img" : "/assets/images/products/cuci8.jpg",
+    "quantity"  : 1
+  },
+  {
+    "id" : 9,
+    "title" : "LG T2108",
+    "price" : 2900000,
+    "stok"  : 12,
+    "desc" : "Kapasitas pencucian: 8Kg",
+    "img" : "/assets/images/products/cuci9.jpg",
+    "quantity"  : 1
+  },
+  {
+    "id" : 10,
+    "title" : "Sharp ES-T77DA",
+    "price" : 1600000,
+    "stok"  : 10,
+    "desc" : "Kapasitas pencucian: 7Kg",
+    "img" : "/assets/images/products/cuci10.jpg",
+    "quantity"  : 1
   }
   ],
   "comments": [

@@ -1,12 +1,20 @@
 import React from "react";
 import { useParams } from 'react-router';
-import { useState } from 'react';
-import DATA from '../Data';
+import { useState, useEffect } from 'react';
+
 
 const ProductDetail = () => {
+    const [products, setProducts] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:3001/posts')
+            .then((response) => response.json())
+            .then((result) => setProducts(result))
+            .catch((err) => console.log(err))
+    },[]);
+
     const [cartBtn, setCartBtn] = useState("Add to Cart")
     const proid = useParams();
-    const proDeatil = DATA.filter(x=>x.id == proid.id)
+    const proDeatil = products.filter(x=>x.id == proid.id)
     const product = proDeatil[0];
     console.log(product);
 
