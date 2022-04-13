@@ -25,7 +25,7 @@ const Header = () => {
                             </li>
                         </ul>
                         <NavLink to="/cart" className="btn btn-outline-primary">
-                            <i className="fa fa-shopping-cart me-1"></i>Cart
+                            <i className="fa fa-shopping-cart me-1"></i>Cart({state.length})
                         </NavLink>
                     
                     </div>

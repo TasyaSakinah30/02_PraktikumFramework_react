@@ -1,0 +1,23 @@
+{
+  "posts": [
+    {
+      "id" : 1,
+      "title" : "Sharp ES-T85CR",
+      "price" : 1600000,
+      "stok"  : 10,
+      "desc" : "Kapasitas pencucian: 8Kg",
+      "img" : "/assets/images/products/cuci1.jpg",
+      "quantity"  : 1
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

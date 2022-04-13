@@ -7,8 +7,8 @@ const Product = () => {
     const [products, setProducts] = useState([]);
 
     const dispatch = useDispatch();
-    const addProduct = (product) => {
-        dispatch(addCart(product));
+    const addProduct = (products) => {
+        dispatch(addCart(products));
     }
 
     useEffect(() => {
@@ -37,7 +37,7 @@ const Product = () => {
                                 <h5 class="">{item.title}</h5>
                                 <p className="lead">Rp {item.price}</p>
                                 <p className="lead">stok({item.stok})</p>
-                                <NavLink to={'cart/'} class="btn btn-primary ms-2" onClick={addProduct}>Beli</NavLink>
+                                <NavLink to={`/cart${item.id}`} class="btn btn-primary ms-2" >Beli</NavLink>
                             </div>
                     </div>
     ))}

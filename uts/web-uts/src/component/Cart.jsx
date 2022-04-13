@@ -30,7 +30,12 @@ function Cart() {
     //         </p>`
     //         findListOfItems.append(newLi)
     //     }
-    
+    useEffect(() => {
+        fetch('http://localhost:3002/posts')
+            .then((response) => response.json())
+            .then((result) => setCart(result))
+            .catch((err) => console.log(err))
+    },[]);
 
     function addtocart(item) {
         let cart2 = [...cart]
@@ -65,7 +70,7 @@ function Cart() {
         let x = cart.map((i) => {
             if (item.id == i.id && i.quantity > 1) {
                 console.log('hola')
-                i.quantity += 1
+                i.quantity -= 1
             }
             return i
         })
@@ -161,7 +166,7 @@ function Cart() {
                     </table>
                     <div className="row">
                         <div className="col">
-                            <h4>TOTAL: {total()}</h4>
+                            <h4>TOTAL: Rp {total()}</h4>
                         </div>
                     </div>
                 </div>
