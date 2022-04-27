@@ -1,0 +1,21 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "name": "dani",
+      "email": "dani@email.com",
+      "phone": "08123456789",
+      "photo": ""
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

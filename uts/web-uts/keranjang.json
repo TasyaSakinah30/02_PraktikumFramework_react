@@ -1,12 +1,21 @@
 {
   "posts": [
     {
+      "userId": 1,
       "id" : 1,
       "title" : "Sharp ES-T85CR",
-      "price" : 1600000,
-      "stok"  : 10,
+      "price" : "1600000",
       "desc" : "Kapasitas pencucian: 8Kg",
       "img" : "/assets/images/products/cuci1.jpg",
+      "quantity"  : 1
+    },
+    {
+      "userId": 1,
+      "id" : 2,
+      "title" : "Sharp ES-T65MW",
+      "price" : "1200000",
+      "desc" : "Kapasitas pencucian: 6.5Kg",
+      "img" : "/assets/images/products/cuci2.jpg",
       "quantity"  : 1
     }
   ],

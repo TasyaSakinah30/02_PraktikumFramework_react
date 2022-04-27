@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from 'react-router-dom';
-import CartBtn from "./buttons/CartBtn";
+// import CartBtn from "./buttons/CartBtn";
 import { useSelector } from "react-redux";
 
 const Header = () => {
@@ -25,7 +25,7 @@ const Header = () => {
                             </li>
                         </ul>
                         <NavLink to="/cart" className="btn btn-outline-primary">
-                            <i className="fa fa-shopping-cart me-1"></i>Cart({state.length})
+                            <i className="fa fa-shopping-cart me-1"></i>Cart
                         </NavLink>
                     
                     </div>

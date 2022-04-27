@@ -85,7 +85,7 @@ function Cart() {
     }
     return (
         <div className="container">
-            <div className="row">
+            {/* <div className="row">
                 {products.map((item) => (
                     <div className="col-3" key={item.id}>
                         <div className="card">
@@ -114,7 +114,7 @@ function Cart() {
                         </div>
                     </div>
                 ))}
-            </div>
+            </div> */}
             <div>
                 <div className="row">
                     <table className="table text-center">
