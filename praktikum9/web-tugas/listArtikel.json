@@ -39,16 +39,6 @@
       "hp": "0812345678",
       "angkatan": "2019",
       "status": "aktif"
-    },
-    {
-      "userId": 1,
-      "id": 1651023599738,
-      "nim": "1987654",
-      "nama": "diyah",
-      "alamat": "malang",
-      "hp": "081234567",
-      "angkatan": "2019",
-      "status": "aktif"
     }
   ],
   "comments": [
