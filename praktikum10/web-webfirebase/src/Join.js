@@ -17,7 +17,7 @@ const Join = () => {
         e.preventDefault();
         createUserWithEmailAndPassword(authInit, email, password)
             .then(res => {
-                if (res.user) Auth.setIsLoggedIn(true);
+                if (res.user) Auth.setLoggedIn(true);
             })
             .catch(err => {
                 setErrors(err.message);
@@ -29,7 +29,7 @@ const Join = () => {
     const handleLoginByGoogle = () => {
       signInWithPopup(authInit, googleProvider)
       .then(res => {
-        if(res.user) Auth.setIsLoggedIn(true)
+        if(res.user) Auth.setLoggedIn(true)
       })
       .catch(err => {
         setErrors(err.message)

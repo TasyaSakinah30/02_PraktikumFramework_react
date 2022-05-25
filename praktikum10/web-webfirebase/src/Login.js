@@ -1,5 +1,11 @@
 import React, { useState, useContext } from "react";
-import { AuthContext } from "./App";
+import { app, AuthContext } from "./App";
+import {
+    signInWithEmailAndPassword,
+    signInWithPopup,
+    GoogleAuthProvider,
+    getAuth
+} from 'firebase/auth';
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -7,11 +13,29 @@ const Login = () => {
     const [error, setErrors] = useState("");
 
     const Auth = useContext(AuthContext);
+    const authInit = getAuth(app)
     const handleForm = e => {
         e.preventDefault();
-        console.log(Auth);
-        Auth.setLoggedIn(true);
+        signInWithEmailAndPassword(authInit, email, password)
+            .then(res => {
+                if (res.user) Auth.setLoggedIn(true)
+            })
+            .catch(err => {
+                setErrors(err.message)
+            })
     };
+
+    const googleProvider = new GoogleAuthProvider()
+
+    const handleLoginByGoogle = () => {
+        signInWithPopup(authInit, googleProvider)
+            .then(res => {
+                if (res.user) Auth.setLoggedIn(true)
+            })
+            .catch(err => {
+                setErrors(err.message)
+            })
+    }
 
     return (
         <div>
@@ -31,7 +55,11 @@ const Login = () => {
                     placeholder="password"
                 />
                 <hr />
-                <button class="googleBtn" type="button">
+                <button
+                    className='googleBtn'
+                    type='button'
+                    onClick={handleLoginByGoogle}
+                >
                     <img
                         src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
                         alt="logo"
