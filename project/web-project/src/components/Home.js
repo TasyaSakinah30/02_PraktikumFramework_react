@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { logoutUser } from "../actions/auth";
-import Navbar from "./Navbar";
 
 class Home extends Component {
     handleLogout = () => {
@@ -11,7 +10,6 @@ class Home extends Component {
     render() {
         const { isLoggingOut, logoutError } = this.props; return (
             <div>
-                <Navbar />
                 <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>

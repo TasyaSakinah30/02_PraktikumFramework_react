@@ -5,12 +5,17 @@ import ProtectedRoute from "./components/protectedRoute";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Navbar from "./components/Navbar";
+import Product from "./components/Product";
+import About from "./components/About";
+// import BlogPost from "./container/BlogPost/BlogPost";
 
 function App(props) {
   const { isAuthenticated, isVerifying } = props;
   return (
     <Switch>
-      {/* <Navbar /> */}
+    <Route path="/login" component={Login} />
+    <>
+    <Navbar />
       <ProtectedRoute
         exact
         path="/"
@@ -18,8 +23,11 @@ function App(props) {
         isAuthenticated={isAuthenticated}
         isVerifying={isVerifying}
       />
-      <Route path="/login" component={Login} />
+      <Route path="/about" component={About} />
+      <Route path="/product" component={Product} />
+      </>
     </Switch>
+    
   );
 }
 function mapStateToProps(state) {
