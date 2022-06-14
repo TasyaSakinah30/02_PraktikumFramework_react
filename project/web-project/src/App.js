@@ -7,6 +7,7 @@ import Login from "./components/Login";
 import Navbar from "./components/Navbar";
 import Product from "./components/Product";
 import About from "./components/About";
+import Keranjang from "./components/Keranjang";
 // import BlogPost from "./container/BlogPost/BlogPost";
 
 function App(props) {
@@ -26,6 +27,7 @@ function App(props) {
       
       <Route path="/about" component={About} />
       <Route path="/product" component={Product} />
+      <Route path="/keranjang" component={Keranjang} />
       </>
 
     </Switch>
