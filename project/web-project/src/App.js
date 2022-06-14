@@ -23,10 +23,14 @@ function App(props) {
         isAuthenticated={isAuthenticated}
         isVerifying={isVerifying}
       />
+      
       <Route path="/about" component={About} />
       <Route path="/product" component={Product} />
       </>
+
     </Switch>
+
+
     
   );
 }
