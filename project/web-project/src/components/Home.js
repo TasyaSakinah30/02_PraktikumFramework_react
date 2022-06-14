@@ -10,7 +10,8 @@ class Home extends Component {
     render() {
         const { isLoggingOut, logoutError } = this.props; return (
             <div>
-                <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+                <img src="/assets/images/toko.jpg" alt="About Us" height="300px" width="1000px"/><br/>
+                {/* <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -35,7 +36,7 @@ class Home extends Component {
                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
                     <span className="visually-hidden">Next</span>
                 </button>
-            </div>
+            </div> */}
                 <button onClick={this.handleLogout}>Logout</button>
                 {isLoggingOut && <p>Logging Out....</p>}
                 {logoutError && <p>Error logging out</p>}

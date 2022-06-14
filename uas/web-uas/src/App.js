@@ -5,15 +5,14 @@ import ProtectedRoute from "./components/protectedRoute";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Navbar from "./components/Navbar";
-import Product from "./components/Product";
 import About from "./components/About";
-import BlogPost from "./container/BlogPost/BlogPost";
+// import BlogPost from "./container/BlogPost/BlogPost";
 
 function App(props) {
   const { isAuthenticated, isVerifying } = props;
   return (
     <Switch>
-    <Route path="/login" component={Login} />
+      <Route path="/login" component={Login} />
     <>
     <Navbar />
       <ProtectedRoute
@@ -24,11 +23,10 @@ function App(props) {
         isVerifying={isVerifying}
       />
       <Route path="/about" component={About} />
-      <Route path="/product" component={Product} />
+      {/* <Route path="/product" component={Product} /> */}
       {/* <Route path="/product" component={BlogPost} /> */}
       </>
     </Switch>
-    
   );
 }
 function mapStateToProps(state) {
