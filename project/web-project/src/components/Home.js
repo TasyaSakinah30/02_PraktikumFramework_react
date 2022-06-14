@@ -12,11 +12,11 @@ class Home extends Component {
         
 
         const { isLoggingOut, logoutError } = this.props; return (
-            <div class="container">
+            <div class="container mt-2">
                 <button onClick={this.handleLogout}>Logout</button>
                 {isLoggingOut && <p>Logging Out....</p>}
                 {logoutError && <p>Error logging out</p>}
-                
+
                 <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
