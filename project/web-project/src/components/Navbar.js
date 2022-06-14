@@ -1,6 +1,8 @@
 import React from "react";
 import routes from "../routes";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { logoutUser } from "../actions/auth";
 
 const Navbar = () => {
     // <ul className="nav">
@@ -27,11 +29,15 @@ const Navbar = () => {
                             <a class="nav-link" href="/product">Product</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="#">Keranjang</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="/about">About</a>
                         </li>
                         <li class="nav-item">
                             <div class="d-grid gap-2 d-md-flex">
                                 <button class="btn btn-warning me-md-2" type="button">LOGOUT</button>
+
                             </div>
                         </li>
                     </ul>
