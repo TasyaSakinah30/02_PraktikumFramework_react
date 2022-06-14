@@ -24,14 +24,16 @@ const Navbar = () => {
                             <a class="nav-link active" aria-current="page" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/produk">Product</a>
+                            <a class="nav-link" href="/product">Product</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/about">About</a>
                         </li>
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                            <button class="btn btn-warning me-md-2" type="button">LOGOUT</button>
-                        </div>
+                        <li class="nav-item">
+                            <div class="d-grid gap-2 d-md-flex">
+                                <button class="btn btn-warning me-md-2" type="button">LOGOUT</button>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
