@@ -7,7 +7,6 @@ import Login from "./components/Login";
 import Navbar from "./components/Navbar";
 import Product from "./components/Product";
 import About from "./components/About";
-import BlogPost from "./container/BlogPost/BlogPost";
 
 function App(props) {
   const { isAuthenticated, isVerifying } = props;
@@ -23,11 +22,15 @@ function App(props) {
         isAuthenticated={isAuthenticated}
         isVerifying={isVerifying}
       />
+      
       <Route path="/about" component={About} />
       <Route path="/product" component={Product} />
       {/* <Route path="/product" component={BlogPost} /> */}
       </>
+
     </Switch>
+
+
     
   );
 }

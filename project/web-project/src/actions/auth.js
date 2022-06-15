@@ -1,4 +1,4 @@
-import firebaseConfig from '../firebase/firebase'
+import { myFirebase } from '../firebase/firebase'
 import { getAuth,signInWithEmailAndPassword,signOut,onAuthStateChanged} from 'firebase/auth';
 
 export const LOGIN_REQUEST = "LOGIN_REQUEST"
@@ -62,7 +62,7 @@ const verifySuccess = () => {
     };
 };
 
-const authInit = getAuth(firebaseConfig);
+const authInit = getAuth(myFirebase);
 
 export const loginUser = (email, password) => dispatch => {
     dispatch(requestLogin)
