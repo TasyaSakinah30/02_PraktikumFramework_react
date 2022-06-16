@@ -7,6 +7,10 @@ import Login from "./components/Login";
 import Navbar from "./components/Navbar";
 import Product from "./components/Product";
 import About from "./components/About";
+import Keranjang from "./components/Keranjang";
+// import AddProduct from "./components/AddProduct";
+
+// import BlogPost from "./container/BlogPost/BlogPost";
 
 function App(props) {
   const { isAuthenticated, isVerifying } = props;
@@ -21,17 +25,13 @@ function App(props) {
         component={Home}
         isAuthenticated={isAuthenticated}
         isVerifying={isVerifying}
-      />
-      
+      />    
       <Route path="/about" component={About} />
       <Route path="/product" component={Product} />
-      {/* <Route path="/product" component={BlogPost} /> */}
+      {/* <Route path="/product" component={AddProduct} /> */}
+      <Route path="/keranjang" component={Keranjang} />
       </>
-
-    </Switch>
-
-
-    
+    </Switch>  
   );
 }
 function mapStateToProps(state) {

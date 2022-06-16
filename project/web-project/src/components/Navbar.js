@@ -1,28 +1,10 @@
-import React from "react";
-import routes from "../routes";
-import { Link } from "react-router-dom";
-import { connect } from "react-redux";
-import { logoutUser } from "../actions/auth";
+import React, { Component } from "react";
+import Logout from "./Logout";
 
-const Navbar = () => {
-    <ul className="nav">
-        {routes.map((route, i) => (
-            <div key={i}>
-                <Link to={route.path}>{route.name}</Link>
-            </div>
-        ))}
-    </ul>
+class Navbar extends Component {
 
-// const Navbar = () => {
-    // <ul className="nav">
-    //     {routes.map((route, i) => (
-    //         <li key={i}>
-    //             <Link to={route.path}>{route.name}</Link>
-    //         </li>
-    //     ))}
-    // </ul>
-
-    return(
+    render() {
+        return (
         <nav class="navbar navbar-expand-lg navbar-dark bg-success">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/">DAPURKU</a>
@@ -38,22 +20,18 @@ const Navbar = () => {
                             <a class="nav-link" href="/product">Product</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Keranjang</a>
+                            <a class="nav-link" href="/keranjang">Keranjang</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/about">About</a>
                         </li>
-                        <li class="nav-item">
-                            <div class="d-grid gap-2 d-md-flex">
-                                <button class="btn btn-warning me-md-2" type="button">LOGOUT</button>
-
-                            </div>
-                        </li>
+                        <Logout/>
                     </ul>
                 </div>
             </div>
         </nav>
-    );
+        )
+    };
     
 }
 
