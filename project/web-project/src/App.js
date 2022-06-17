@@ -7,7 +7,7 @@ import Login from "./components/Login";
 import Navbar from "./components/Navbar";
 import Product from "./components/Product";
 import About from "./components/About";
-import Keranjang from "./components/Keranjang";
+import Keranjang from "./components/Cart";
 // import AddProduct from "./components/AddProduct";
 
 // import BlogPost from "./container/BlogPost/BlogPost";
@@ -29,7 +29,7 @@ function App(props) {
       <Route path="/about" component={About} />
       <Route path="/product" component={Product} />
       {/* <Route path="/product" component={AddProduct} /> */}
-      <Route path="/keranjang" component={Keranjang} />
+      <Route path="/Keranjang" component={Keranjang} />
       </>
     </Switch>  
   );
