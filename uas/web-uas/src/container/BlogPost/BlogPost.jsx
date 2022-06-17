@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import './BlogPost.css';
-import Post from "../../components/BlogPost/Post";
+import Post from "../../component/BlogPost/Post";
 // import API from "../../services";
 import firebase from "firebase";
-import firebaseConfig from "../../firebase/firebase";
+import firebaseConfig from "../../firebase/config";
 
 class BlogPost extends Component{
     constructor(props) {
@@ -12,6 +12,9 @@ class BlogPost extends Component{
 
         this.state = {
             listArtikel: []
+        }
+        this.insert = {
+            listCart: []
         }
     }
 
@@ -39,6 +42,30 @@ class BlogPost extends Component{
         }
     }
 
+    handleTombolBeli = (uid, title, body, price) => {
+        const {listArtikel} = this.state;
+        const {listCart} = this.insert;
+        const onCart = listCart.find((cart) => cart.uid === uid);
+        const indeksArtikel = listArtikel.findIndex((data) => {
+            return data.uid === uid;
+        });
+        if (onCart) {
+            firebase
+                .database()
+                .ref("cart/" + indeksArtikel)
+        } else {
+            firebase
+                .database()
+                .ref("cart/" + indeksArtikel)
+                .set({
+                    uid: uid,
+                    title: title,
+                    body: body,
+                    price: price
+                });
+        }
+    }
+
     handleHapusArtikel = (idArtikel) => {
         const {listArtikel} = this.state;
         const newState = listArtikel.filter(data => {
@@ -50,24 +77,27 @@ class BlogPost extends Component{
     handleTombolSimpan = (event) => {
         let title = this.refs.judulArtikel.value;
         let body = this.refs.isiArtikel.value;
+        let price = this.refs.hargaArtikel.value;
         let uid = this.refs.uid.value;
 
-        if (uid && title && body) {
+        if (uid && title && price && body) {
             const { listArtikel } = this.state;
             const indeksArtikel = listArtikel.findIndex(data => {
                 return data.uid === uid;
             });
             listArtikel[indeksArtikel].title = title;
             listArtikel[indeksArtikel].body = body;
+            listArtikel[indeksArtikel].price = price;
             this.setState({ listArtikel });
-        } else if (title && body) {
+        } else if (title && price && body) {
             const uid = new Date().getTime().toString();
             const { listArtikel } = this.state;
-            listArtikel.push({ uid, title, body });
+            listArtikel.push({ uid, title, body, price });
             this.setState({ listArtikel });
         }
         this.refs.judulArtikel.value = "";
         this.refs.isiArtikel.value = "";
+        this.refs.hargaArtikel.value = "";
         this.refs.uid.value = "";
     };
     
@@ -87,13 +117,20 @@ class BlogPost extends Component{
                             <textarea className="form-control" id="body" name="body" rows="3" ref="isiArtikel"></textarea>
                         </div>
                     </div>
+                    <div className="form-group row">
+                        <label htmlFor="price" className="col-sm-2 col-form-label">Harga</label>
+                        <div className="col-sm-10">
+                            <textarea className="form-control" id="price" name="price" rows="3" ref="hargaArtikel"></textarea>
+                        </div>
+                    </div>
                     <input type="hidden" name="uid" ref="uid"/>
                     <button type="submit" className="btn btn-primary" onClick={this.handleTombolSimpan}>Simpan</button>
                 </div>
                 <h2>Daftar Artikel</h2>
                 {
                     this.state.listArtikel.map(artikel => {
-                        return <Post key={artikel.id} judul={artikel.title} isi={artikel.body} idArtikel={artikel.uid} hapusArtikel={this.handleHapusArtikel}/>
+                        return <Post key={artikel.id} judul={artikel.title} isi={artikel.body} harga={artikel.price} idArtikel={artikel.uid} 
+                        beliProduct={this.handleTombolBeli} hapusArtikel={this.handleHapusArtikel}/>
                     })
                 }
             </div>

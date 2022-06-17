@@ -1,39 +1,30 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
-import { connect } from "react-redux";
-import ProtectedRoute from "./components/protectedRoute";
-import Home from "./components/Home";
-import Login from "./components/Login";
-import Navbar from "./components/Navbar";
-import About from "./components/About";
-// import BlogPost from "./container/BlogPost/BlogPost";
+import logo from './logo.svg';
+import './App.css';
+import BlogPost from './container/BlogPost/BlogPost';
+import { Route, Switch } from 'react-router-dom';
+import Navbar from './container/Navbar';
+import Home from './container/Home';
+import Cart from './container/Cart';
+import Keranjang from './container/Keranjang';
+import About from './container/About';
 
-function App(props) {
-  const { isAuthenticated, isVerifying } = props;
+function App() {
   return (
-    <Switch>
-      <Route path="/login" component={Login} />
     <>
-    <Navbar />
-      <ProtectedRoute
-        exact
-        path="/"
-        component={Home}
-        isAuthenticated={isAuthenticated}
-        isVerifying={isVerifying}
-      />
-      <Route path="/about" component={About} />
-      {/* <Route path="/product" component={Product} /> */}
-      {/* <Route path="/product" component={BlogPost} /> */}
-      </>
-    </Switch>
+    <Navbar/>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/product" component={BlogPost} />
+        <Route exact path="/cart" component={Cart} />
+        <Route exact path="/about" component={About} />
+        {/* <Route exact path="/product" component={Product} /> */}
+        {/* <Route exact path="/product/:id" component={ProductDetail} /> */}
+        {/* <Route exact path="/checkout" component={Checkout} /> */}
+        {/* <Route exact path="/about" component={About} /> */}
+        
+      </Switch>
+    </>
   );
 }
-function mapStateToProps(state) {
-  return {
-    isAuthenticated: state.auth.isAuthenticated,
-    isVerifying: state.auth.isVerifying
-  };
-}
 
-export default connect(mapStateToProps)(App);
+export default App;
