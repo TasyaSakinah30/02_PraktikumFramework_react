@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import BlogPost from "./container/BlogPost/BlogPost";
+// import BlogPost from "./container/BlogPost/BlogPost";
 import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(

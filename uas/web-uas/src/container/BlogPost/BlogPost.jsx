@@ -16,6 +16,8 @@ class BlogPost extends Component{
         this.insert = {
             listCart: []
         }
+
+        this.handleTombolBeli = this.handleTombolBeli.bind(this);
     }
 
     ambilDataDariServerAPI = () => {
@@ -43,20 +45,27 @@ class BlogPost extends Component{
     }
 
     handleTombolBeli = (uid, title, body, price) => {
-        const {listArtikel} = this.state;
-        const {listCart} = this.insert;
-        const onCart = listCart.find((cart) => cart.uid === uid);
-        const indeksArtikel = listArtikel.findIndex((data) => {
+            const {listArtikel} = this.state;
+            const {listCart} = this.insert;
+            const onCart = listCart.find((cart) => cart.uid === uid);
+            const indeksArtikel = listArtikel.findIndex((data) => {
             return data.uid === uid;
         });
         if (onCart) {
             firebase
                 .database()
-                .ref("cart/" + indeksArtikel)
+                .ref("/s" + indeksArtikel)
+            
+            const { listArtikel } = this.state;
+            const indeksArtikel = listArtikel.findIndex(data => {
+                return data.uid === uid;
+
+            });
+            this.setState({ listCart });
         } else {
             firebase
                 .database()
-                .ref("cart/" + indeksArtikel)
+                .ref("/" + indeksArtikel)
                 .set({
                     uid: uid,
                     title: title,
