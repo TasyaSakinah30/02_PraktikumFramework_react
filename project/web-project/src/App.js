@@ -7,7 +7,8 @@ import Login from "./components/Login";
 import Navbar from "./components/Navbar";
 import Product from "./components/Product";
 import About from "./components/About";
-import Keranjang from "./components/Cart";
+import Keranjang from "./components/Keranjang";
+import AddBarang from "./components/ProductPost";
 // import AddProduct from "./components/AddProduct";
 
 // import BlogPost from "./container/BlogPost/BlogPost";
@@ -29,7 +30,8 @@ function App(props) {
       <Route path="/about" component={About} />
       <Route path="/product" component={Product} />
       {/* <Route path="/product" component={AddProduct} /> */}
-      <Route path="/Keranjang" component={Keranjang} />
+      <Route path="/keranjang" component={Keranjang} />
+      <Route path="/addBarang" component={AddBarang} />
       </>
     </Switch>  
   );
