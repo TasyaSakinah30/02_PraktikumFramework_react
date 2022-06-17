@@ -29,15 +29,15 @@ class ProductPost extends Component{
         .set(this.state);
     }
 
-    componentDidMount() {
-        this.ambilDataDariServerAPI()
-    }
+    // componentDidMount() {
+    //     this.ambilDataDariServerAPI()
+    // }
 
-    componentDidUpdate(prevProp, prevState) {
-        if (prevProp !== this.state) {
-            this.simpanDataKeServerAPI();
-        }
-    }
+    // componentDidUpdate(prevProp, prevState) {
+    //     if (prevProp !== this.state) {
+    //         this.simpanDataKeServerAPI();
+    //     }
+    // }
 
     handleHapusArtikel = (idArtikel) => {
         const {listArtikel} = this.state;
