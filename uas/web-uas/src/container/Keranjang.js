@@ -10,7 +10,7 @@ class Keranjang extends Component {
         firebase.initializeApp(firebaseConfig);
 
         this.state = {
-            listCart: []
+            listCard: []
         }
     }
 
@@ -30,7 +30,7 @@ class Keranjang extends Component {
         total = 0;
         subtotal = 0;
         no = 0;
-        return this.state.listCart.map((cart) => {
+        return this.state.listCard.map((cart) => {
             subtotal = cart.price * cart.qty;
             total = total + cart.price * cart.qty;
             no += 1;
