@@ -5,8 +5,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import BlogPost from "./container/BlogPost/BlogPost";
+import { BrowserRouter } from 'react-router-dom';
 
-ReactDOM.render(<BlogPost />, document.getElementById('content'));
+ReactDOM.render(
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>,
+    document.getElementById('root')
+  );
+// ReactDOM.render(<BlogPost />, document.getElementById('content'));
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
 //   <React.StrictMode>

@@ -1,11 +1,11 @@
-import React, {Component} from "react";
-import './BlogPost.css';
-import Post from "../../component/BlogPost/Post";
+import React, { Component } from "react";
+import './ProductPost.css';
+import Post from "./Post";
 // import API from "../../services";
-import firebase from "firebase";
-import firebaseConfig from "../../firebase/config";
+import firebase from "firebase/compat/app";
+import firebaseConfig from "../firebase/config";
 
-class BlogPost extends Component{
+class ProductPost extends Component{
     constructor(props) {
         super(props);
         firebase.initializeApp(firebaseConfig);
@@ -109,4 +109,4 @@ class BlogPost extends Component{
         )
     }
 }
-export default BlogPost;
+export default ProductPost;

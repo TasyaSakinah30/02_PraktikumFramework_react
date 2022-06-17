@@ -8,9 +8,8 @@ import Navbar from "./components/Navbar";
 import Product from "./components/Product";
 import About from "./components/About";
 import Keranjang from "./components/Keranjang";
-import AddProduct from "./components/AddProduct";
-
-// import BlogPost from "./container/BlogPost/BlogPost";
+import ProductPost from "./components/ProductPost";
+// import AddProduct from "./components/AddProduct";
 
 function App(props) {
   const { isAuthenticated, isVerifying } = props;
@@ -28,8 +27,9 @@ function App(props) {
       />    
       <Route path="/about" component={About} />
       <Route path="/product" component={Product} />
-      <Route path="/add" component={AddProduct} />
+      {/* <Route path="/add" component={AddProduct} /> */}
       <Route path="/Keranjang" component={Keranjang} />
+      <Route path="/addBarang" component={ProductPost} />
       </>
     </Switch>  
   );

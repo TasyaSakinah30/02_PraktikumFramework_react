@@ -26,9 +26,11 @@ class Navbar extends Component {
                             <a class="nav-link" href="/about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/add">Add Product</a>
+                            <a class="nav-link" href="/addBarang">tambah product</a>
                         </li>
-                        <Logout/>
+                        <li>
+                            <Logout/>
+                        </li>
                     </ul>
                 </div>
             </div>

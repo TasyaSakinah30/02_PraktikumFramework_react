@@ -1,6 +1,6 @@
 import React from "react";
 
-const Post = (props) => {
+const Postt = (props) => {
     function tambahProduct(e) {
         props.handleTombolBeli(
             props.idProduct,
@@ -25,4 +25,4 @@ const Post = (props) => {
         </div>
     )
 }
-export default Post;
+export default Postt;

@@ -2,10 +2,9 @@ import React, { Component } from "react";
 import Post from "./Post";
 // import API from "../../services";
 import firebase from "firebase";
-// import firebaseConfig from "../firebase/firebase";
-import { myFirebase } from '../firebase/firebase'
+import firebaseConfig from "../firebase/config";
 
-firebase.initializeApp(myFirebase);
+firebase.initializeApp(firebaseConfig);
 class AddProduct extends Component {
     constructor(props) {
         super(props);

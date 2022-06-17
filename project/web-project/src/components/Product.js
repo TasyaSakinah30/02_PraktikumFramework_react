@@ -9,9 +9,6 @@ const Product = () => {
     return(
         <div class="container mt-3">
             <div class="row">
-            <div>
-                    <a href="#" class="btn btn-primary">Tambah</a>
-                    </div>
                 <div class="col mt-1">
                     <div class="card">
                         <img src="https://cf.shopee.co.id/file/0c89ee68b866da3787df5a0ea8afd4c2" class="card-img-top" alt="..." />
