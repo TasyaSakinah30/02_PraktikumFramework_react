@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import firebase from "firebase/compat/app";
 
 var total, subtotal, no;
 
@@ -12,13 +13,11 @@ class Keranjang extends Component {
     }
 
     ambilDataKeranjang = () => {
-        fetch("http://localhost:3002/keranjang")
-            .then((response) => response.json())
-            .then((jsonHasilAmbilDariAPI) => {
-                this.setState({
-                    keranjang: jsonHasilAmbilDariAPI,
-                });
-            });
+        let ref = firebase.database().ref("/");
+        ref.on("value", snapshot => {
+            const state = snapshot.val();
+            this.setState(state);
+        });
     };
 
     listKeranjang() {

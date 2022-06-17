@@ -33,11 +33,11 @@ class ProductPost extends Component{
     //     this.ambilDataDariServerAPI()
     // }
 
-    // componentDidUpdate(prevProp, prevState) {
-    //     if (prevProp !== this.state) {
-    //         this.simpanDataKeServerAPI();
-    //     }
-    // }
+    componentDidUpdate(prevProp, prevState) {
+        if (prevProp !== this.state) {
+            this.simpanDataKeServerAPI();
+        }
+    }
 
     handleHapusArtikel = (idArtikel) => {
         const {listArtikel} = this.state;
