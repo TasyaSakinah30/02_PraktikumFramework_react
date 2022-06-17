@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import API from "../../services";
-import firebase from "firebase";
+import firebase from "firebase/compat/app";
 import PostCart from "./PostCart";
 
 class Cart extends Component {
