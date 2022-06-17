@@ -45,8 +45,11 @@ class Keranjang extends Component {
             );
         });
     }
+        
+    
 
     render() {
+        
         return (
             <div className="col-lg-12">
                 <div className="container">
@@ -62,7 +65,9 @@ class Keranjang extends Component {
                                     <th scope="col">Subtotal</th>
                                 </tr>
                             </thead>
-                            <tbody>{this.listKeranjang()}</tbody>
+                            <tbody>
+                                {this.listKeranjang()}
+                            </tbody>
                             <tfoot className="font-weight-bold text-white bg-primary">
                                 <td className="text-center" colSpan="4">
                                     Total
